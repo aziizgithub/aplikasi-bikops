@@ -59,7 +59,7 @@
                                 <div class="header_left">
                                     <div class="logo">
                                         <a href="index.html">
-                                            <img src="<?php echo base_url();?>assets/img/02.jpg" alt="">
+                                            <img src="<?php echo base_url();?>assets/img/logo.jpg" alt="">
                                         </a>
                                     </div>
                                 </div>
