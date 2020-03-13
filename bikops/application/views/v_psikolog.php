@@ -68,7 +68,7 @@
                                         <nav>
                                             <ul id="navigation">
                                                 <li><a  href="<?php echo base_url();?>index.php/dashboard">Beranda</a></li>
-                                                <li><a href="<?php echo base_url();?>index.php/konseling">Konseling</a></li>
+                                                <li><a href="Courses.html">Konseling</a></li>
                                                 <li><a href="#">Penanganan<i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
                                                         <li><a href="blog.html">Obat</a></li>
@@ -97,54 +97,14 @@
             </div>
         </div>
     </header>
-    <!-- header-end -->
-
-    <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="slider_active owl-carousel">
-            <!-- single_carouse -->
-            <div class="single_slider  d-flex align-items-center slider_bg_1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-8">
-                            <div class="slider_text ">
-                                <h3>We Are The Best Psychological Consulting Agency.</h3>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/ single_carouse -->
-            <!-- single_carouse -->
-            <div class="single_slider  d-flex align-items-center slider_bg_2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-8">
-                            <div class="slider_text ">
-                                <h3>That isn't illness. Everyone have an individual story .</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/ single_carouse -->
-            
-        </div>
-    </div>
-    <!-- slider_area_end -->
-
-    <!-- service_area_start  -->
-   
-    <!--/ service_area_start  -->
-
+  
     <!-- popular_program_area_start  -->
     <div class="popular_program_area section__padding">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section_title text-center">
-                        <h3>Popular Psikolog</h3>
+                        <h3>Psikolog yang Tersedia</h3>
                     </div>
                 </div>
             </div>

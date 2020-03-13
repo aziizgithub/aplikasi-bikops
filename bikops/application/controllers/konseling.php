@@ -1,11 +1,11 @@
  <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class register extends CI_Controller {
+class konseling extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('view_regis');
+		$this->load->view('v_konseling');
 	}		
 }
 ?>

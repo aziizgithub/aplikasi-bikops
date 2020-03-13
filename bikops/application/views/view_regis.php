@@ -4,7 +4,7 @@
 
 
 <head>
-    <title>Login V12</title>
+    <title>Registrasi Bikops</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->  
@@ -113,35 +113,48 @@
                         Registrasi
                     </span>
 
-                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-                        <input class="input100" type="text" placeholder="Nama Lengkap">
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Mohon isi nama pengguna">
+                        <input class="input100" type="text" placeholder="Nama Pengguna">
                         <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-user"></i>
                         </span>
                     </div>
 
-                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Mohon isi alamat e-mail">
+                        <input class="input100" type="email" name="pass" placeholder="Email">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Mohon isi password">
                         <input class="input100" type="password" name="pass" placeholder="Password">
                         <span class="focus-input100"></span>
-                        <span class="symbol-input100">
-                            <i class="fa fa-lock"></i>
-                        </span>
+                    </div>
+
+                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Mohon isi jenis kelamin">
+                        <input class="input100" type="jeniskelamin" name="pass" placeholder="Jenis Kelamin">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Mohon isi umur">
+                        <input class="input100" type="umur" name="pass" placeholder="Umur">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                    <div class="wrap-input100 validate-input m-b-10" data-validate = "Mohon isi kota">
+                        <input class="input100" type="kota" name="kota" placeholder="Kota">
+                        <span class="focus-input100"></span>
+                    </div>
+
+                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Mohon isi No Hp">
+                        <input class="input100" type="no hp" name="no hp" placeholder="No Hp">
+                        <span class="focus-input100"></span>
                     </div>
 
                     <div class="container-login100-form-btn p-t-10">
-                        <button class="login100-form-btn">
-                            Login
+                        <button class="login100-form-btn" action="submit">
+                            Registrasi
                         </button>
                     </div>
-
-                    <div class="text-center w-full p-t-25 p-b-230">
-                        <a href="#" class="txt1">
-                            Forgot Username / Password?
-                        </a>
-                    </div>
-
-                    
+                 
                 </form>
             </div>
         </div>

@@ -104,7 +104,7 @@
     <div class="limiter">
         <div class="container-login100">
             <div class="wrap-login100 p-t-50 p-b-30">
-                <form class="login100-form validate-form">
+                <form class="login100-form action="<?php echo base_url().'index.php/login/auth'?>"method="post">
                     <div class="login100-form-avatar">
                         <img src="<?php echo base_url();?>/assets/images/login.png" alt="AVATAR">
                     </div>
@@ -113,8 +113,10 @@
                         Login
                     </span>
 
+                    <?php echo $this->session->flashdata('msg');?>
+
                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
-                        <input class="input100" type="text" name="username" placeholder="Username">
+                        <input class="input100" type="text" name="nmuser" placeholder="nmuser">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-user"></i>
@@ -122,7 +124,7 @@
                     </div>
 
                     <div class="wrap-input100 validate-input m-b-10" data-validate = "Password is required">
-                        <input class="input100" type="password" name="pass" placeholder="Password">
+                        <input class="input100" type="password" name="password" placeholder="password">
                         <span class="focus-input100"></span>
                         <span class="symbol-input100">
                             <i class="fa fa-lock"></i>
@@ -130,7 +132,7 @@
                     </div>
 
                     <div class="container-login100-form-btn p-t-10">
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
                             Login
                         </button>
                     </div>
@@ -190,6 +192,10 @@
 
     <script src="<?php echo base_url();?>/assets/js/main.js"></script>
 
+<!-- jQuery-->
+    <script src="<?php echo base_url().'assets/js/jquery.js'?>"></script>
+    <!-- Bootsrap -->
+    <script src="<?php echo base_url().'assets/js/bootstrap.min.js'?>"></script>
 </body>
 
 </html>

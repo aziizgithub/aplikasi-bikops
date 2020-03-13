@@ -1,29 +1,16 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Model_login extends CI_model 
-{
-	public function getlogin($u,$p)
-	{
-		$pwd = $p;
-		$this->db->where('nmuser',$u);
-		$this->db->where('password',$pwd);
-		$query = $this->db->get('user');
-		if($query->num_rows()>0)
-		{
-			foreach ($query->result() as $row) 
-			{
-				$sess 	= array('nmuser' 		=> $row->nmuser);
-								
-								
-				$this->session->set_userdata($sess);
-				redirect('dashboard');
-			}
-		}
-		else 
-		{
-			$this->session->set_flashdata('info','maaf nmuser atau password salah');
-			redirect('login');
-		}
-	}
+class Model_login extends CI_Model{
+    //cek nip dan password dosen
+    function auth_client($nmuser,$password){
+        $query=$this->db->query("SELECT * FROM user WHERE nmuser='$nmuser' AND password='$password' LIMIT 1");
+        return $query;
+    }
+ 
+    //cek nim dan password mahasiswa
+    function auth_psikolog($nmpsig,$password){
+        $query=$this->db->query("SELECT * FROM psikolog WHERE nmpsig='$nmpsig' AND password='$password' LIMIT 1");
+        return $query;
+    }
+ 
 }
+?>
