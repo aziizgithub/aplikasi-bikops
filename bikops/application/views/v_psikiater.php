@@ -97,54 +97,28 @@
             </div>
         </div>
     </header>
-    <!-- header-end -->
-
-    <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="slider_active owl-carousel">
-            <!-- single_carouse -->
-            <div class="single_slider  d-flex align-items-center slider_bg_1">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-8">
-                            <div class="slider_text ">
-                                <h3>We Are The Best Psychological Consulting Agency.</h3>
-                                
-                            </div>
-                        </div>
+  
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Psikiater</h3>
                     </div>
                 </div>
             </div>
-            <!--/ single_carouse -->
-            <!-- single_carouse -->
-            <div class="single_slider  d-flex align-items-center slider_bg_2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-8">
-                            <div class="slider_text ">
-                                <h3>That isn't illness. Everyone have an individual story .</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--/ single_carouse -->
-            
         </div>
     </div>
-    <!-- slider_area_end -->
-
-    <!-- service_area_start  -->
-   
-    <!--/ service_area_start  -->
+    <!-- bradcam_area_end  -->
 
     <!-- popular_program_area_start  -->
-    <div class="popular_program_area section__padding">
+    <div class="popular_program_area ">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section_title text-center">
-                        <h3>Popular Psikolog</h3>
+                       
                     </div>
                 </div>
             </div>
@@ -152,10 +126,8 @@
                 <div class="col-lg-12">
                     <nav class="custom_tabs text-center">
                         <div class="nav" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Graduate                                </a>
-                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Postgraduate </a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">PHD Scholarships</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact2" role="tab" aria-controls="nav-contact" aria-selected="false">Training</a>
+                           
+                            
                         </div>
                     </nav>
                 </div>
@@ -172,7 +144,7 @@
                                     <span>Agriculture</span>
                                     <h4>Chemical engneering</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                    <a href="#" class="boxed-btn5">Apply NOw</a>
+                                    <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                 </div>
                             </div>
                         </div>
@@ -185,7 +157,7 @@
                                     <span>Agriculture</span>
                                     <h4>Mechanical engneering</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                    <a href="#" class="boxed-btn5">Apply NOw</a>
+                                    <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                 </div>
                             </div>
                         </div>
@@ -198,7 +170,7 @@
                                     <span>Agriculture</span>
                                     <h4>Bio engneering</h4>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                    <a href="#" class="boxed-btn5">Apply NOw</a>
+                                    <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +187,7 @@
                                         <span>Agriculture</span>
                                         <h4>Chemical engneering</h4>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
+                                        <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -228,7 +200,7 @@
                                         <span>Agriculture</span>
                                         <h4>Mechanical engneering</h4>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
+                                        <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -241,7 +213,7 @@
                                         <span>Agriculture</span>
                                         <h4>Bio engneering</h4>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
+                                        <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -258,7 +230,7 @@
                                         <span>Agriculture</span>
                                         <h4>Chemical engneering</h4>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
+                                        <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -271,7 +243,7 @@
                                         <span>Agriculture</span>
                                         <h4>Mechanical engneering</h4>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
+                                        <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +256,7 @@
                                         <span>Agriculture</span>
                                         <h4>Bio engneering</h4>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
+                                        <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +273,7 @@
                                         <span>Agriculture</span>
                                         <h4>Chemical engneering</h4>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
+                                        <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -314,7 +286,7 @@
                                         <span>Agriculture</span>
                                         <h4>Mechanical engneering</h4>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
+                                        <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -327,7 +299,7 @@
                                         <span>Agriculture</span>
                                         <h4>Bio engneering</h4>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
+                                        <a href="#" class="boxed-btn5">Lebih Lanjut</a>
                                     </div>
                                 </div>
                             </div>
@@ -335,13 +307,7 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="course_all_btn text-center">
-                        <a href="Courses.html" class="boxed-btn4">View All course</a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
     <!-- popular_program_area_end -->

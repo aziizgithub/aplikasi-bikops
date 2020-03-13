@@ -78,7 +78,7 @@
                                                 <li><a href="">Cari Pakar<i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
                                                         <li><a href="<?php echo base_url();?>index.php/psikolog">Psikolog</a></li>
-                                                        <li><a href="event_details.html">Psikiater</a></li>
+                                                        <li><a href="<?php echo base_url();?>index.php/psikiater">Psikiater</a></li>
                                                     </ul>
                                                 </li>
                                                 <li><a href="contact.html">Tentang Kami</a></li>
@@ -97,6 +97,66 @@
             </div>
         </div>
     </header>
+
+
+    <!-- bradcam_area_start  -->
+    <div class="bradcam_area breadcam_bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="bradcam_text">
+                        <h3>Konseling</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- bradcam_area_end  -->
+
+     
+
+  <!-- service_area_start  -->
+    <div class="service_area gray_bg">
+        <div class="container">
+            <div class="row justify-content-center ">
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service d-flex align-items-center ">
+                        <div class="icon">
+                            <i class="flaticon-school"></i>
+                        </div>
+                        <div class="service_info">
+                            <h4>Anak-Anak</h4>
+                            <p>Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service d-flex align-items-center ">
+                        <div class="icon">
+                            <i class="flaticon-error"></i>
+                        </div>
+                        <div class="service_info">
+                            <h4>Remaja</h4>
+                            <p>Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single_service d-flex align-items-center ">
+                        <div class="icon">
+                            <i class="flaticon-book"></i>
+                        </div>
+                        <div class="service_info">
+                            <h4>Dewasa</h4>
+                            <p>Available</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/ service_area_start  -->
+
   
  <footer class="footer">
         <div class="footer_top">
