@@ -58,5 +58,19 @@ class Model_client extends CI_Model{
         $this->db->where('email',  $this->input->post('email'));
         $this->db->update('client', $data);
     }
+    
+    public function get_client_konseling($idpsig){
+        return $this->db->query("
+
+            SELECT transaksi.*, client.nama, psikolog.nmpsig
+            from transaksi
+            JOIN client
+            on transaksi.iduser = client.iduser
+            join psikolog
+            on transaksi.idpsig = psikolog.idpsig
+            where transaksi.idpsig = '$idpsig'
+
+            ")->result_array();
+    }
 
 }

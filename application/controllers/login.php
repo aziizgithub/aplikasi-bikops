@@ -7,7 +7,7 @@ class Login extends CI_Controller{
     }
     
 
-public function index()
+ function index()
     {
         if ($this->session->userdata('login')){
             if ($this->session->userdata('role')=='client') {
@@ -69,13 +69,13 @@ public function index()
                  $this->model_auth->update_login();
                         redirect('client');
                     }else if ($user['role'] == 'pskiater' ) {
-                        $data = $this->db->get_where('pskiater', ['email'=>$user['nmuser']])->result_array();
+                        $data = $this->db->get_where('pskiater', ['email'=>$user['nmuser']])->row_array();
                     $this->session->set_userdata($data);
                     $this->model_auth->update_login();
                         redirect('pskiater');
                     }
                     else if ($user['role'] == 'psikolog' ) {
-                        $data = $this->db->get_where('psikolog', ['email'=>$user['nmuser']])->result_array();
+                        $data = $this->db->get_where('psikolog', ['email'=>$user['nmuser']])->row_array();
                     $this->session->set_userdata($data);
                     $this->model_auth->update_login();
                         redirect('psikolog');

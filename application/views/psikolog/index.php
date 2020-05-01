@@ -23,6 +23,7 @@
                                         </div>
                                         <small class="text-danger"><?php echo form_error('nmpsig'); ?></small>
                                     </div>
+                                    
                                     <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="col-md-6">Email</label>
@@ -55,6 +56,9 @@
                                         </div>
                                         <small class="text-danger"><?php echo form_error('bidang'); ?></small>
                                     </div>
+
+                                    
+
                                     <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="col-md-6">Kota</label>
@@ -94,6 +98,15 @@
                                             
                                         </div>
                                    
+
+                                        <!-- <div class="form-group">
+                                        <label class="col-md-6">Kasus</label>
+                                            <input type="text" name="kasus" class="form-control form-control-line" value="<?php echo $psikolog['kasus']; ?>">
+                                            
+                                        </div>
+                                        <small class="text-danger"><?php echo form_error('kasus'); ?></small> -->
+                                    </div>
+
                                     </div>
                                      <div class="form-group">
                                         <div class="col-sm-12">

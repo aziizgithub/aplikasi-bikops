@@ -24,6 +24,15 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/animate.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/slicknav.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/animatee.css">
+    
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/owl.carousell.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/magnific-popup.css">
+
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/flaticonn.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 </head>
 
@@ -44,7 +53,7 @@
                                     
                                 </div>
                                 <div class="text_wrap">
-                                    <p><a href="<?php echo base_url();?>login"> <i class="ti-user"></i>  Login</a> <a href="<?php echo base_url();?>register">Register</a></p>
+                                    <p><a href="<?php echo base_url('client/profile');?>"> <i class="ti-user"></i> Profile</a> <a href="<?php echo base_url();?>login/logout">Logout</a></p>
                                 </div>
                             </div>
                         </div>
@@ -58,7 +67,7 @@
                             <div class="header_wrap d-flex justify-content-between align-items-center">
                                 <div class="header_left">
                                     <div class="logo">
-                                        <a href="index.html">
+                                        <a href="">
                                             <img src="<?php echo base_url();?>assets/img/logo.jpg" alt="">
                                         </a>
                                     </div>
@@ -67,21 +76,9 @@
                                     <div class="main-menu  d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
-                                                <li><a  href="<?php echo base_url();?>dashboard">Beranda</a></li>
-                                                <li><a href="Courses.html">Konseling</a></li>
-                                                <li><a href="#">Penanganan<i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Obat</a></li>
-                                                        <li><a href="single-blog.html"></a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="">Cari Pakar<i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="<?php echo base_url();?>psikolog">Psikolog</a></li>
-                                                        <li><a href="<?php echo base_url();?>psikiater">Psikiater</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Tentang Kami</a></li>
+                                                <li><a  href="<?php echo base_url();?>client">Beranda</a></li>
+                                                <li><a  href="<?php echo base_url();?>konseling">Konseling</a></li>
+                                                <li><a href="tentangkami">Tentang Kami</a></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -115,40 +112,172 @@
 
      
 
-  <!-- service_area_start  -->
-    <div class="service_area gray_bg">
+  <!-- kategori_start  -->
+<div class="event_details_area section__padding">
         <div class="container">
-            <div class="row justify-content-center ">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_service d-flex align-items-center ">
-                        <div class="icon">
-                            <i class="flaticon-school"></i>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single_event d-flex align-items-center">
+                        <div class="thumb">
+                            <img src="<?php echo base_url();?>assets/img/hh.jpg" alt="">
+                            <div class="date text-center">
+                                <h4>Anak-Anak</h4>
+                                <span>1-15 years</span>
+                            </div>
                         </div>
-                        <div class="service_info">
-                            <h4>Anak-Anak</h4>
-                            <p>Available</p>
+                        <div class="event_details_info">
+                            <div class="event_info">
+                                <a href="#">
+                                    <h4>Kasus yang terjadi pada anak-anak</h4>
+                                 </a>
+                                
+                            </div>
+                            <div class="services-2 w-70 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-wealth"></span></div>
+                        <div class="text pl-4">
+                            <h4>Kekerasan</h4>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                        </div>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accountant"></span></div>
+                        <div class="text pl-4">
+                            <h4>Pelecehan</h4>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                        </div>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-teamwork"></span></div>
+                        <div class="text pl-4">
+                            <h4>Bullying</h4>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                        </div>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accounting"></span></div>
+                        <div class="text pl-4">
+                            <h4>Kecanduan</h4>
+                            <p>Kecanduan yang terjadi pada anak-anak dapat terjadi pada
+                            Gawai, Game Online, Dll</p>
+                        </div>
+                    </div>
+                            <a href="<?php echo base_url();?>konseling/anak" class="boxed-btn3">Konseling Lanjutan</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_service d-flex align-items-center ">
-                        <div class="icon">
-                            <i class="flaticon-error"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+ <div class="event_details_area section_padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single_event d-flex align-items-center">
+                        <div class="thumb">
+                            <img src="<?php echo base_url();?>assets/img/hh.jpg" alt="">
+                            <div class="date text-center">
+                                <h4>Remaja</h4>
+                                <span>16-23 years</span>
+                            </div>
                         </div>
-                        <div class="service_info">
-                            <h4>Remaja</h4>
-                            <p>Available</p>
+                        <div class="event_details_info">
+                            <div class="event_info">
+                                <a href="#">
+                                    <h4>Kasus yang terjadi pada Remaja</h4>
+                                 </a>
+                                
+                            </div>
+                            <div class="services-2 w-70 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-wealth"></span></div>
+                        <div class="text pl-4">
+                            <h4>Kekerasan</h4>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                        </div>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accountant"></span></div>
+                        <div class="text pl-4">
+                            <h4>Pelecehan</h4>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                        </div>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-teamwork"></span></div>
+                        <div class="text pl-4">
+                            <h4>Bullying</h4>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                        </div>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accounting"></span></div>
+                        <div class="text pl-4">
+                            <h4>Kecanduan</h4>
+                            <p>Kecanduan yang terjadi pada anak-anak dapat terjadi pada
+                            Gawai, Game Online, Dll</p>
+                        </div>
+                        
+                        
+                    </div>
+                            <a href="<?php echo base_url();?>konseling/remaja" class="boxed-btn3">Konseling Lanjutan</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_service d-flex align-items-center ">
-                        <div class="icon">
-                            <i class="flaticon-book"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="event_details_area section__padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="single_event d-flex align-items-center">
+                        <div class="thumb">
+                            <img src="<?php echo base_url();?>assets/img/hh.jpg" alt="">
+                            <div class="date text-center">
+                                <h4>Dewasa</h4>
+                                <span>24-50 years</span>
+                            </div>
                         </div>
-                        <div class="service_info">
-                            <h4>Dewasa</h4>
-                            <p>Available</p>
+                        <div class="event_details_info">
+                            <div class="event_info">
+                                <a href="#">
+                                    <h4>Kasus yang terjadi pada Dewasa</h4>
+                                 </a>
+                                
+                            </div>
+                            <div class="services-2 w-70 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-wealth"></span></div>
+                        <div class="text pl-4">
+                            <h4>Kekerasan</h4>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                        </div>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accountant"></span></div>
+                        <div class="text pl-4">
+                            <h4>Rumah Tangga</h4>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                        </div>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-teamwork"></span></div>
+                        <div class="text pl-4">
+                            <h4>Perubahan Orientasi</h4>
+                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                        </div>
+                    </div>
+                    <div class="services-2 w-100 d-flex">
+                        <div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-accounting"></span></div>
+                        <div class="text pl-4">
+                            <h4>Curhat</h4>
+                            <p>Kecanduan yang terjadi pada anak-anak dapat terjadi pada
+                            Gawai, Game Online, Dll</p>
+                        </div>
+                    </div>
+                            <a href="<?php echo base_url();?>konseling/dewasa" class="boxed-btn3">Konseling Lanjutan</a>
                         </div>
                     </div>
                 </div>
@@ -314,6 +443,20 @@
     <script src="<?php echo base_url();?>/assets/js/mail-script.js"></script>
 
     <script src="<?php echo base_url();?>/assets/js/main.js"></script>
+    <script src="<?php echo base_url();?>assets/js/jquery.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/popperr.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/bootstrapp.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.easing.1.3.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.waypoints.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.stellar.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.animateNumber.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/owl.carousell.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/jquery.magnific-popupp.min.js"></script>
+  <script src="<?php echo base_url();?>assets/js/scrollax.min.js"></script>
+  <script src="<?php echo base_url();?>assets/https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="<?php echo base_url();?>assets/js/google-map.js"></script>
+  <script src="<?php echo base_url();?>assets/js/maiin.js"></script>
 
 </body>
 

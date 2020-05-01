@@ -27,113 +27,56 @@ $tipe = $this->session->userdata('type')
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="col-md-6">
-                                        <div class="form-group">
-                                           <label class="col-md-6">Silahkan Pilih Kategori</label>
-                                         <select class="form-control" name="bidang" value="<?= set_value('bidang'); ?>" required>
-                                            <option value="" >--Pilih Kategori--</option>
-                                            
-                                            <option value="Anak-Anak" >Anak-Anak</option>
-                                            <option value="Remaja">Remaja</option>
-                                            <option value="Dewasa">Dewasa</option>
-                                        </select>
-                                        </div>
-                                    </div>
-                                    </div>
+                                  
+                    <!-- column -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                
+                                     <?php echo $this->session->flashdata('message'); ?>
+                                
+                               <!--  <a href="<?php echo base_url('psikolog/kons/add'); ?>" class="label label-info float-right mr-4">Tambah</a> -->
+                             </div>
+                            <div class="table-responsive">
+                                <table  id='user' class="table v-middle">
+                                    <thead>
+                                        <tr class="bg-light">
+                                            <th class="border-top-0">#</th>
+                                            <th class="border-top-0">Nama Clint</th>
+                                            <th class="border-top-0">Kasus</th>
+                                            <th class="border-top-0">Kategori Kasus</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                            <?php 
+                                            $i=1;
+                                            foreach ($kons as $key): ?>
+                                        <tr>
+                                                
+                                           <td><?php echo $i; ?></td>
+                                           <td><?php echo $key['nama'] ?></td>
+                                           <td><?php echo $key['kategori'] ?></td>
+                                           <td><?php echo $key['case'] ?></td>
+                                           <!-- 
+                                           <td>
+                                               <a href="<?php echo base_url('psikolog/kons'); ?>/<?php echo $key['iduser']; ?>/edit" class="label label-success">Edit</a>
+                                               <a href="<?php echo base_url('psikolog/kons'); ?>/<?php echo $key['iduser']; ?>/delete" onclick="return confirm('Yakin Hapus?');" class="label label-danger">Hapus</a>
+                                           </td> -->
+
+                                        </tr>
+                                            <?php 
+                                            $i++;
+                                        endforeach ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                                 </div>
-                                <!-- <div class="row">
-                                    <div class="col">
-                                        <div class="messaging">
-      <div class="inbox_msg">
-        <div class="inbox_people">
-          <div class="headind_srch">
-            <div class="recent_heading">
-              <h4>Recent</h4>
-            </div>
-            <div class="srch_bar">
-              <div class="stylish-input-group">
-                <input type="text" class="search-bar"  placeholder="Search" >
-                <span class="input-group-addon">
-                <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                </span> </div>
-            </div>
-          </div>
-          <div class="inbox_chat">
-            <div class="chat_list active_chat">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <?php foreach ($recent as $key): ?>
-        <?php $last_chat = $this->db->query("SELECT max(id_chat) as latest, pesan FROM `chat` WHERE pengirim = '$key->pengirim' AND penerima = '$key->penerima'")->row_array(); ?>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput</h5>
-                  <p><?= $last_chat["pesan"]; ?></p>
-                </div>
-              </div>
-            </div>
-            <?php endforeach ?>
-            
-           
-            
-          
-            
-          </div>
-        </div>
-        <div class="mesgs">
-          <div class="msg_history">
-      
-            <div id="notip"> 
-            <?php foreach ($chat as $list): ?>
-            <?php if ($list->pengirim == 2): ?>
-             <div class="incoming_msg">
-              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-              <div class="received_msg">
-                <div class="received_withd_msg">
-                  <p><?php echo  $list->pesan;?></p>
-                  <span class="time_date"> <?php echo date('h:i',$list->time); ?> |    <?php echo date('F j',$list->time); ?></span></div>
-              </div>
-            </div>
-           <?php else: ?>
-            <div class="outgoing_msg">
-              <div class="sent_msg">
-                <p><?php echo  $list->pesan;?></p>
-                <span class="time_date"> <?php echo date('h:i',$list->time); ?> | <?php echo date('F j',$list->time); ?></span>
-            </div>
-            </div>
- <?php endif ?>
-            <?php endforeach ?>
-            
-                
-            </div>
-            
-            
-          </div>
-          <div class="type_msg">
-            <div class="input_msg_write">
-              
-              <input id="pesan" type="text" class="write_msg" placeholder="Type a message" />
-              <button class="msg_send_btn" type="submit" value="send" onclick="store()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-     
-      
-    </div>
-                                    </div>
-                                </div> -->
+                                
                                 
                              </div>
                             
@@ -150,6 +93,30 @@ $tipe = $this->session->userdata('type')
             <!-- ============================================================== -->
 
   <script>
+
+ const inbox_chat =document.querySelector('.inbox_chat');
+ const chat_list =document.querySelectorAll('.chat_list');
+
+inbox_chat.addEventListener('click', function(e){
+    if(e.target.className == 'chat_list'){
+
+        // jumbo.src = e.target.src;
+        // jumbo.classList.add('fade');
+        // setTimeout(function(){
+        //     jumbo.classList.remove('fade');
+        // }, 500);
+
+        chat_list.forEach(function(chat_list){
+         if (chat_list.classList.contains('active_chat')) {}
+
+        chat_list.className = 'chat_list';
+        });
+
+        e.target.classList.add('active_chat');
+    }
+});
+
+
 
     // Enable pusher logging - don't include this in production
     Pusher.logToConsole = true;

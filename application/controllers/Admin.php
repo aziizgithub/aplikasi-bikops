@@ -9,8 +9,15 @@ function __construct(){
     $this->load->model('model_psikiater');
     $this->load->model('model_psikolog');
     $this->load->model('model_user');
+    $this->load->model('model_case');
     $this->load->library('form_validation');
   }
+
+
+
+
+
+
 	public function index()
 	{
 			if (!empty($this->uri->segment('3')) && !empty($this->uri->segment('4'))) {
@@ -434,8 +441,82 @@ public function add_psikiater(){
 		$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Hapus Data berhasil</div>');
 		redirect('admin/psikiater');
 	}
+
+
+
+public function case()
+	{
+		if (!empty($this->uri->segment('3')) && !empty($this->uri->segment('4'))) {
+			if ($this->uri->segment('4') == 'edit') {
+				return $this->edit_case($this->uri->segment('3'));
+			}
+			if ($this->uri->segment('4') == 'delete') {
+				return $this->delete_case($this->uri->segment('3'));
+			}
+		}
+
+		if (!empty($this->uri->segment('3'))) {
+			if ($this->uri->segment('3') == 'add') {
+				return $this->add_case();
+			}
+		}
+
+		$data['case'] = $this->model_case->get_case();
+		$data['title'] = "Kelola User";
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/sidebar_admin');
+		$this->load->view('admin/user/case');
+		$this->load->view('templates/footer');
+	}
+
+
+	public function add_case(){
+		$data['title'] = "Kelola User";
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/sidebar_admin');
+		$this->load->view('admin/user/case_add');
+		$this->load->view('templates/footer');
+	}
+
+	public function add_case_run(){
+
+	$this->model_case->add_case();
+	$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Tambah Data berhasil</div>');
+		redirect('admin/case');
+		
+		
+	}
+
+	public function edit_case(){
+
+		$data['case'] =$this->model_case->edit_case($this->uri->segment('3'));
+		$data['title'] = "Kelola User";
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/sidebar_admin');
+		$this->load->view('admin/user/case_edit');
+		$this->load->view('templates/footer');
+
+	}
+
+	public function edit_case_run(){
+		
+	
+
+		$this->model_case->edit_case_run();
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Edit Data berhasil</div>');
+		redirect('admin/case');
+	
+	}
+
+	public function delete_case(){
+
+		$this->model_case->delete_case($this->uri->segment('3'));
+		$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Hapus Data berhasil</div>');
+		redirect('admin/case');
+	}
+
+
+
 }
-
-
 ?>
 

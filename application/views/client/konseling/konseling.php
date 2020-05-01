@@ -24,155 +24,82 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="col-md-6">
-                                        <div class="form-group">
-                                           <label class="col-md-6">Silahkan Pilih Kategori</label>
-                                         <select class="form-control" name="bidang" value="<?= set_value('bidang'); ?>" required>
-                                            <option value="" >--Pilih Kategori--</option>
+                                        <div class="card">
+                            <div class="card-body">
+                                         <?php echo $this->session->flashdata('message'); ?>
+                               <form class="form-horizontal form-material" action="<?php echo base_url('psikolog/ubah_psikolog'); ?>" method="post">
+                                 <div class="row">
+                                  <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-md-6">Nama</label>
+                                            <input readonly type="text" name="nmpsig" class="form-control form-control-line" value="<?php echo $psikolog['nmpsig']; ?>">
                                             
-                                            <option value="Anak-Anak" >Anak-Anak</option>
-                                            <option value="Remaja">Remaja</option>
-                                            <option value="Dewasa">Dewasa</option>
-                                        </select>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-md-6">Email</label>
+                                            <input readonly type="text" name="email" class="form-control form-control-line" value="<?php echo $psikolog['email']; ?>" readonly>
+                                            
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-md-6">bidang</label>
+                                            
+                                   
+                                            <input  readonly type="text" name="nohp" class="form-control form-control-line" value="<?php echo $psikolog['bidang']; ?>">
+                                            
+                                        </div>
+                                       
+                                    </div>
+
+                                    
+
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-md-6">No. Hp</label>
+                                            <input  readonly type="text" name="nohp" class="form-control form-control-line" value="<?php echo $psikolog['kota']; ?>">
+                                            
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="col-md-6">No. Hp</label>
+                                            <input  readonly type="text" name="nohp" class="form-control form-control-line" value="<?php echo $psikolog['nohp']; ?>">
+                                            
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                       <label class="col-md-6">Jenis Kelamin</label>
+                                        <input class="form-control form-control-line" type="text" value="<?php echo $psikolog['jk']; ?>" name="jk" readonly>
+                                            
+                                        </div>
+                                   
+
+                                    
+                                    </div>
+
+                                    </div>
+                                     
+<div class="form-group">
+                                        <div class="col-sm-12">
+                                            
+                                            <a href="<?= base_url('client'); ?>" class="btn btn-danger">Back</a>
                                         </div>
                                     </div>
+                             </div>
+                            </form>
+                             </div>
                                     </div>
                                 </div>
-                                <!-- <div class="row">
-                                    <div class="col">
-                                        <div class="messaging">
-      <div class="inbox_msg">
-        <div class="inbox_people">
-          <div class="headind_srch">
-            <div class="recent_heading">
-              <h4>Recent</h4>
-            </div>
-            <div class="srch_bar">
-              <div class="stylish-input-group">
-                <input type="text" class="search-bar"  placeholder="Search" >
-                <span class="input-group-addon">
-                <button type="button"> <i class="fa fa-search" aria-hidden="true"></i> </button>
-                </span> </div>
-            </div>
-          </div>
-          <div class="inbox_chat">
-            <div class="chat_list active_chat">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-            <div class="chat_list">
-              <div class="chat_people">
-                <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-                <div class="chat_ib">
-                  <h5>Sunil Rajput <span class="chat_date">Dec 25</span></h5>
-                  <p>Test, which is a new approach to have all solutions 
-                    astrology under one roof.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="mesgs">
-          <div class="msg_history">
-      
-            <div id="notip"> 
-            <?php foreach ($chat as $list): ?>
-            <?php if ($list->pengirim == 2): ?>
-             <div class="incoming_msg">
-              <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
-              <div class="received_msg">
-                <div class="received_withd_msg">
-                  <p><?php echo  $list->pesan;?></p>
-                  <span class="time_date"> 11:01 AM    |    June 9</span></div>
-              </div>
-            </div>
-           <?php else: ?>
-            <div class="outgoing_msg">
-              <div class="sent_msg">
-                <p><?php echo  $list->pesan;?></p>
-                <span class="time_date"> 11:01 AM    |    June 9</span>
-            </div>
-            </div>
- <?php endif ?>
-            <?php endforeach ?>
-            
-                
-            </div>
-            
-            
-          </div>
-          <div class="type_msg">
-            <div class="input_msg_write">
-              
-              <input id="pesan" type="text" class="write_msg" placeholder="Type a message" />
-              <button class="msg_send_btn" type="submit" value="send" onclick="store()"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      
-     
-      
-    </div>
-                                    </div>
-                                </div> -->
+                                
                                 
                              </div>
                             
@@ -256,3 +183,18 @@
 
 
 
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script type="text/javascript">
+  window.__lc = window.__lc || {};
+  window.__lc.license = 11902266;
+  (function() {
+    var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+  })();
+</script>
+<noscript>
+<a href="https://www.livechatinc.com/chat-with/11902266/" rel="nofollow">Chat with us</a>,
+powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+</noscript>
+<!-- End of LiveChat code -->

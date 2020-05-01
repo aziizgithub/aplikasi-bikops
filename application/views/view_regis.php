@@ -68,19 +68,8 @@
                                         <nav>
                                             <ul id="navigation">
                                                 <li><a  href="<?php echo base_url();?>dashboard">Beranda</a></li>
-                                                <li><a href="Courses.html">Konseling</a></li>
-                                                <li><a href="#">Penanganan<i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Penanganan</a></li>
-                                                        <li><a href="single-blog.html">single-blog</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Cari Pakar<i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="Event.html">Psikolog</a></li>
-                                                        <li><a href="event_details.html">Psikiater</a></li>
-                                                    </ul>
-                                                </li>
+                                                <li><a href="<?php echo base_url();?>konseling">Konseling</a></li>
+                                                
                                                 <li><a href="contact.html">Tentang Kami</a></li>
                                             </ul>
                                         </nav>

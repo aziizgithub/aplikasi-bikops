@@ -69,18 +69,7 @@
                                             <ul id="navigation">
                                                 <li><a  href="<?php echo base_url();?>dashboard">Beranda</a></li>
                                                 <li><a href="<?php echo base_url();?>konseling">Konseling</a></li>
-                                                <li><a href="#">Penanganan<i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="blog.html">Obat</a></li>
-                                                        <li><a href="single-blog.html"></a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="">Cari Pakar<i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="<?php echo base_url();?>psikolog">Psikolog</a></li>
-                                                        <li><a href="<?php echo base_url();?>psikiater">Psikiater</a></li>
-                                                    </ul>
-                                                </li>
+                                               
                                                 <li><a href="contact.html">Tentang Kami</a></li>
                                             </ul>
                                         </nav>
@@ -138,213 +127,54 @@
    
     <!--/ service_area_start  -->
 
-    <!-- popular_program_area_start  -->
+    <<!-- popular_program_area_start  -->
     <div class="popular_program_area section__padding">
         <div class="container">
-            <div class="row">
+            <div class="row mb-5">
                 <div class="col-lg-12">
                     <div class="section_title text-center">
                         <h3>Popular Psikolog</h3>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="custom_tabs text-center">
-                        <div class="nav" id="nav-tab" role="tablist">
-                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Graduate                                </a>
-                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Postgraduate </a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">PHD Scholarships</a>
-                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact2" role="tab" aria-controls="nav-contact" aria-selected="false">Training</a>
-                        </div>
-                    </nav>
-                </div>
-            </div>
+            
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single__program">
-                                <div class="program_thumb">
-                                    <img src="<?php echo base_url();?>/assets/img/program/1.png" alt="">
-                                </div>
-                                <div class="program__content">
-                                    <span>Agriculture</span>
-                                    <h4>Chemical engneering</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                    <a href="#" class="boxed-btn5">Apply NOw</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6">
-                            <div class="single__program">
-                                <div class="program_thumb">
-                                    <img src="<?php echo base_url();?>/assets/img/program/2.png" alt="">
-                                </div>
-                                <div class="program__content">
-                                    <span>Agriculture</span>
-                                    <h4>Mechanical engneering</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                    <a href="#" class="boxed-btn5">Apply NOw</a>
-                                </div>
-                            </div>
-                        </div>
+                        <?php $dewasa = $this->db->query("
+                            SELECT * from psikolog
+                            order by jlh_kasus DESC limit 0,3
+                        ")->result_array(); ?>
+                       <?php foreach ($dewasa as $keys ): ?>
+                           
                         <div class="col-lg-4 col-md-6">
                             <div class="single__program">
                                 <div class="program_thumb">
                                     <img src="<?php echo base_url();?>/assets/img/program/3.png" alt="">
                                 </div>
                                 <div class="program__content">
-                                    <span>Agriculture</span>
-                                    <h4>Bio engneering</h4>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                    <a href="#" class="boxed-btn5">Apply NOw</a>
+                                   
+                                    <h4><?php echo $keys["nmpsig"];?></h4>
+
+                                    <p>Bidang : <?php echo $keys["bidang"];?> <br>
+                                Jumlah Kasus : <?php echo $keys["jlh_kasus"];?></p>
+                                    
+                                  
+
                                 </div>
                             </div>
                         </div>
+                       <?php endforeach ?>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single__program">
-                                    <div class="program_thumb">
-                                        <img src="<?php echo base_url();?>/assets/img/program/1.png" alt="">
-                                    </div>
-                                    <div class="program__content">
-                                        <span>Agriculture</span>
-                                        <h4>Chemical engneering</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single__program">
-                                    <div class="program_thumb">
-                                        <img src="<?php echo base_url();?>/assets/img/program/3.png" alt="">
-                                    </div>
-                                    <div class="program__content">
-                                        <span>Agriculture</span>
-                                        <h4>Mechanical engneering</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single__program">
-                                    <div class="program_thumb">
-                                        <img src="<?php echo base_url();?>/assets/img/program/2.png" alt="">
-                                    </div>
-                                    <div class="program__content">
-                                        <span>Agriculture</span>
-                                        <h4>Bio engneering</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single__program">
-                                    <div class="program_thumb">
-                                        <img src="<?php echo base_url();?>/assets/img/program/3.png" alt="">
-                                    </div>
-                                    <div class="program__content">
-                                        <span>Agriculture</span>
-                                        <h4>Chemical engneering</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single__program">
-                                    <div class="program_thumb">
-                                        <img src="<?php echo base_url();?>/assets/img/program/2.png" alt="">
-                                    </div>
-                                    <div class="program__content">
-                                        <span>Agriculture</span>
-                                        <h4>Mechanical engneering</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single__program">
-                                    <div class="program_thumb">
-                                        <img src="<?php echo base_url();?>/assets/img/program/1.png" alt="">
-                                    </div>
-                                    <div class="program__content">
-                                        <span>Agriculture</span>
-                                        <h4>Bio engneering</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                <div class="tab-pane fade" id="nav-contact2" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                <div class="row">
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single__program">
-                                    <div class="program_thumb">
-                                        <img src="<?php echo base_url();?>/assets/img/program/2.png" alt="">
-                                    </div>
-                                    <div class="program__content">
-                                        <span>Agriculture</span>
-                                        <h4>Chemical engneering</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single__program">
-                                    <div class="program_thumb">
-                                        <img src="<?php echo base_url();?>/assets/img/program/1.png" alt="">
-                                    </div>
-                                    <div class="program__content">
-                                        <span>Agriculture</span>
-                                        <h4>Mechanical engneering</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-md-6">
-                                <div class="single__program">
-                                    <div class="program_thumb">
-                                        <img src="<?php echo base_url();?>/assets/img/program/3.png" alt="">
-                                    </div>
-                                    <div class="program__content">
-                                        <span>Agriculture</span>
-                                        <h4>Bio engneering</h4>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
-                                        <a href="#" class="boxed-btn5">Apply NOw</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
+            
+                
+                
             </div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="course_all_btn text-center">
-                        <a href="Courses.html" class="boxed-btn4">View All course</a>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
-    <!-- popular_program_area_end -->
 
     <!-- latest_coures_area_start  -->
     
@@ -353,64 +183,6 @@
     <!-- latest_coures_area_start  -->
     
     <!--/ latest_coures_area_end -->
-
-
-    <!-- recent_news_area_start  -->
-    <div class="recent_news_area section__padding">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 col-md-10">
-                    <div class="section_title text-center mb-70">
-                        <h3 class="mb-45">Recent News</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="single__news">
-                        <div class="thumb">
-                            <a href="single-blog.html">
-                                <img src="<?php echo base_url();?>/assets/img/news/1.png" alt="">
-                            </a>
-                            <span class="badge">Group Study</span>
-                        </div>
-                        <div class="news_info">
-                            <a href="single-blog.html">
-                                <h4>Those Other College Expenses You
-                                    Aren’t Thinking About</h4>
-                            </a>
-                            <p class="d-flex align-items-center"> <span><i class="flaticon-calendar-1"></i> May 10, 2020</span> 
-                            
-                            <span> <i class="flaticon-comment"></i> 01 comments</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="single__news">
-                        <div class="thumb">
-                            <a href="single-blog.html">
-                                <img src="<?php echo base_url();?>/assets/img/news/2.png" alt="">
-                            </a>
-                            <span class="badge bandge_2">Hall Life</span>
-                        </div>
-                        <div class="news_info">
-                            <a href="single-blog.html">
-                                <h4>Those Other College Expenses You
-                                    Aren’t Thinking About</h4>
-                            </a>
-                            <p class="d-flex align-items-center"> <span><i class="flaticon-calendar-1"></i> May 10, 2020</span> 
-                            
-                            <span> <i class="flaticon-comment"></i> 01 comments</span>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- recent_news_area_end  -->
 
     <!-- footer start -->
     <footer class="footer">

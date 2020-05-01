@@ -7,10 +7,22 @@ function __construct(){
     is_logged_in();
       $this->load->model('model_psikolog');
     $this->load->library('form_validation');
+    $this->load->model('model_client');
+  }
+
+
+      public function client_konseling(){
+     
+        $data['title'] = "Halaman psikolog";
+        $data['kons'] = $this->model_client->get_client_konseling($this->session->userdata('idpsig'));
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/sidebar_psikolog');
+        $this->load->view('psikolog/client_konseling');
+        $this->load->view('templates/footer');
   }
   public function index(){
 
-	        //     if (!empty($this->uri->segment('3')) && !empty($this->uri->segment('4'))) {
+            //     if (!empty($this->uri->segment('3')) && !empty($this->uri->segment('4'))) {
         //     if ($this->uri->segment('4') == 'aktif') {
         //         return $this->aktif($this->uri->segment('3'));
         //     }
@@ -33,7 +45,7 @@ function __construct(){
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar_psikolog');
         $this->load->view('psikolog/index');
-        $this->load->view('templates/footer');	
+        $this->load->view('templates/footer');  
 }
 
     public function ubah_psikolog(){
@@ -44,10 +56,12 @@ function __construct(){
 public function konseling()
     {
        
+      
      $data = [
             "chat" => $this->db->order_by('id_chat','ASC')->get('chat')->result(),
-            "recent" => $this->db->get('recent')->result() 
+            "recent" => $this->db->get_where('recent', ["penerima" => $this->session->userdata('idpsig')])->result() 
         ];
+        $data['kons'] = $this->model_client->get_client_konseling($this->session->userdata('idpsig'));
         $data['title'] = "Halaman psikolog";
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar_psikolog');

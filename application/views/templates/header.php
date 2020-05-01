@@ -28,6 +28,8 @@
 <![endif]-->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" type="text/css" rel="stylesheet">
 <style type="text/css">
+
+
     .container{max-width:1170px; margin:auto;}
 img{ max-width:100%;}
 .inbox_people {
@@ -162,6 +164,11 @@ img{ max-width:100%;}
 .msg_history {
   height: 516px;
   overflow-y: auto;
+}
+
+.chat_list:hover{
+  background:#ebebeb;
+  cursor:pointer;
 }
 </style>
  <script src="https://js.pusher.com/5.1/pusher.min.js"></script>
